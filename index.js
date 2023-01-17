@@ -16,10 +16,42 @@ const app = {};
 
 // testing file system
 // TODO pore muthe dibo
+/*
 
 data.create("test", "newFile", { name: "abid", language: "bangla" }, (err) => {
   console.log("this was the error", err);
 });
+
+*/
+
+// data read
+
+/*
+  data.read("test", "newFile", (err, data) => {
+    console.log(err, data);
+  });
+*/
+
+// data update
+
+/*
+  data.update(
+    "test",
+    "newFile",
+    { name: "abid", language: "bangla", age: 23, country: "BD" },
+    (err) => {
+      console.log(err);
+    }
+  );
+ */
+
+// data delete
+/*
+  data.delete("test", "newFile", (err) => {
+    console.log(err);
+  });
+
+*/
 
 // create server
 app.createServer = () => {
