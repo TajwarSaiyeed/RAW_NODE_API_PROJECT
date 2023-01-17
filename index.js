@@ -9,9 +9,17 @@
 const http = require("http");
 const { handleReqRes } = require("./Helpers/handleReqRes");
 const environment = require("./helpers/environment");
+const data = require("./lib/data");
 
 // app object - module staffolding
 const app = {};
+
+// testing file system
+// TODO pore muthe dibo
+
+data.create("test", "newFile", { name: "abid", language: "bangla" }, (err) => {
+  console.log("this was the error", err);
+});
 
 // create server
 app.createServer = () => {
