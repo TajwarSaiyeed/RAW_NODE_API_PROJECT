@@ -1,5 +1,8 @@
 ```
 LWS_RAW_NODE_API_PROJECT
+├─ .data
+│  └─ test
+│     └─ newFile.json
 ├─ .gitignore
 ├─ handlers
 │  ├─ notFound.js
@@ -8,6 +11,8 @@ LWS_RAW_NODE_API_PROJECT
 │  ├─ environment.js
 │  └─ handleReqRes.js
 ├─ index.js
+├─ lib
+│  └─ data.js
 ├─ package-lock.json
 ├─ package.json
 ├─ README.md
