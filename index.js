@@ -8,6 +8,7 @@
 // Dependencies
 const http = require("http");
 const url = require("url");
+const { StringDecoder } = require("string_decoder");
 
 // app object - module staffolding
 const app = {};
@@ -37,8 +38,18 @@ app.handleReqRes = (req, res) => {
   const queryStringObject = parsedUrl.query;
   const headersObject = req.headers;
 
-  // handle response
-  res.end("hello programmers, good morning");
+  const decoder = new StringDecoder("utf-8");
+  let realData = "";
+  req.on("data", (buffer) => {
+    realData += decoder.write(buffer);
+  });
+
+  req.on("end", () => {
+    realData += decoder.end();
+    console.log(realData);
+    // handle response
+    res.end("hello programmers, good morning");
+  });
 };
 
 // start the server
