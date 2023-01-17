@@ -5,6 +5,7 @@ LWS_RAW_NODE_API_PROJECT
 │  ├─ notFound.js
 │  └─ sampleHandler.js
 ├─ helpers
+│  ├─ environment.js
 │  └─ handleReqRes.js
 ├─ index.js
 ├─ package-lock.json
